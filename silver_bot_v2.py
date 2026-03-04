@@ -1,5 +1,6 @@
 from flask import Flask, request
 import time
+import os
 
 app = Flask(__name__)
 
@@ -65,12 +66,6 @@ def webhook():
     print("="*100)
     return "OK", 200
 
-print("MR. 100% AUTO-BOT v12 - LOWER-TF CONFIRMATION + VOLATILITY BOOST ENABLED")
-print("SIMULATED mode: False (REAL TRADING — FULL AUTONOMOUS)")
-print("Listening for signals...")
-print("Keep this window open!")
-
-# Render needs this exact entrypoint
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=False)

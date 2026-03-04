@@ -70,5 +70,7 @@ print("SIMULATED mode: False (REAL TRADING — FULL AUTONOMOUS)")
 print("Listening for signals...")
 print("Keep this window open!")
 
+# Render needs this exact entrypoint
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 80)), debug=False)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
